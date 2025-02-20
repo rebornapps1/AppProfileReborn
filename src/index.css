@@ -1,0 +1,60 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 10%;
+    --foreground: 0 0% 98%;
+    --card: 0 0% 12%;
+    --card-foreground: 0 0% 98%;
+    --popover: 0 0% 12%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 85% 48%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 0 0% 18%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 0 0% 18%;
+    --muted-foreground: 0 0% 60%;
+    --accent: 0 0% 18%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 85% 48%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 18%;
+    --input: 0 0% 18%;
+    --ring: 0 85% 48%;
+  }
+
+  * {
+    @apply border-border selection:bg-netflix-red/20 selection:text-white;
+  }
+
+  body {
+    @apply bg-netflix-dark text-foreground font-['Inter'] antialiased min-h-screen;
+  }
+
+  .glass {
+    @apply backdrop-blur-lg bg-white/5 border border-white/10;
+  }
+
+  .netflix-card {
+    @apply bg-netflix-gray/50 backdrop-blur-lg border border-white/5 rounded-lg 
+           shadow-lg shadow-black/20 transition-all duration-300 hover:shadow-xl 
+           hover:shadow-black/30 hover:border-white/10;
+  }
+
+  .netflix-button {
+    @apply px-6 py-2 bg-netflix-red text-white font-semibold rounded 
+           hover:bg-netflix-red/90 transition-colors duration-300 
+           disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+
+  .netflix-input {
+    @apply w-full px-4 py-2 bg-netflix-gray border border-white/10 rounded
+           text-white placeholder:text-white/50 focus:outline-none focus:ring-2 
+           focus:ring-netflix-red/50 transition-all duration-300;
+  }
+}
